@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="“en”">
+  <head>
+    <style>
+      .login-container {
+        display: flex;
+        max-width: 375px;
+        flex-direction: column;
+        margin: auto;
+      }
+      .status-bar {
+        transform: rotate(-1.1102230246251565e-16rad);
+        align-self: center;
+        display: flex;
+        width: 95%;
+        justify-content: space-between;
+        padding: 16px 14px 16px 29px;
+      }
+      .status-icon {
+        aspect-ratio: 2.64;
+        object-fit: contain;
+        object-position: center;
+        width: 29px;
+        align-self: start;
+      }
+      .status-icons-group {
+        display: flex;
+        align-items: start;
+        gap: 5px;
+      }
+      .wifi-icon {
+        aspect-ratio: 1.7;
+        object-fit: contain;
+        object-position: center;
+        width: 17px;
+      }
+      .signal-icon {
+        aspect-ratio: 1.36;
+        object-fit: contain;
+        object-position: center;
+        width: 15px;
+      }
+      .battery-icon {
+        aspect-ratio: 2.08;
+        object-fit: contain;
+        object-position: center;
+        width: 25px;
+        align-self: stretch;
+      }
+      .separator {
+        background-color: white;
+        min-height: 104px;
+    
+        width: 100%;
+      }
+      .logo {
+        aspect-ratio: 3.97;
+        object-fit: contain;
+        object-position: center;
+        width: 234px;
+        align-self: center;
+        margin-top: 30px;
+        max-width: 100%;
+      }
+      .login-form {
+        align-self: center;
+        display: flex;
+        margin-top: 30px;
+        width: 303px;
+        max-width: 100%;
+        flex-direction: column;
+        color: #e4e4e4;
+        font: 400 16px Noto Sans KR, sans-serif;
+      }
+      input {
+        border: none;
+        outline: none;
+        background: transparent;
+        border-bottom: 2.5px solid transparent;
+      }
+
+      .input-group input {
+        border: none;
+        outline: none;
+        background: transparent;
+        border-bottom: 2.5px solid #e4e4e4;
+        margin-bottom: 10px;
+      }
+
+      .input-group {
+        border-radius: 0;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 20px; /* 각 input-group 간의 간격을 늘립니다. */
+
+       
+      }
+      .input-label {
+        align-self: start;
+        
+      }
+      .input-underline {
+        margin-top: 13px;
+        height: 2px;
+        
+      }
+
+      .password-group {
+        margin-top: 43px;
+      }
+      .login-button-container {
+        display: flex;
+        margin-top: 30px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        font: 16px Noto Sans KR, sans-serif;
+        color: #ffffff;
+        
+      }
+      .login-button-text {
+        border-radius: 15px;
+        background-color: #24945e;
+        padding: 14px 130px;
+        border: 1px solid #24945e;
+        text-align: center;
+      }
+      .options-container {
+        display: flex;
+        margin-top: 15px;
+        max-width: 100%;
+        gap: 7px;
+        font: 400 16px Noto Sans KR, sans-serif;
+
+        font-weight: 400;
+      }
+      .option-link {
+        color: #727680;
+        text-decoration: none;
+        font: 400 16px Noto Sans KR, sans-serif; 
+      }
+      .login-button-container {
+  font: 400 16px Noto Sans KR, sans-serif; /* 로그인 버튼 텍스트 설정 */
+}
+
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      .option-separator {
+        width: 1px;
+        height: 23px;
+        background-color: #e4e4e4;
+      }
+      input::placeholder {
+        color: #e4e4e4;
+        opacity: 1;
+      }
+      /* 반응형 스타일 */
+      @media (max-width: 400px) {
+        .login-container {
+          padding: 10px; 
+        }
+
+        .logo {
+          width: 80%;
+          margin-top: 20px;
+        }
+
+        .login-form {
+          width: 100%; 
+        }
+
+        .login-button-text {
+          padding: 12px 20px; 
+          
+        }
+
+        .options-container {
+          flex-direction: column; 
+          gap: 10px; 
+        }
+
+        .option-link {
+          text-align: center; 
+        }
+      }
+
+      @media (max-width: 768px) {
+        .login-container {
+          max-width: 90%; 
+        }
+
+        .logo {
+          width: 70%; 
+        }
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <title>Final</title>
+  </head>
+  <body>
+    <section class="login-container">
+      <header class="status-bar">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/9f77c803dd3584fb5654dedd568c8b34e6a842fd435dfb130129de00d46f1acb?placeholderIfAbsent=true&apiKey=8a4ad2682aba4f97a1784ad18aa51cf5"
+          alt=""
+          class="status-icon"
+        />
+        <div class="status-icons-group">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/1877d61c62894972b0c6bde0a86f6234d67a374bf0ed779023474f72a27e946b?placeholderIfAbsent=true&apiKey=8a4ad2682aba4f97a1784ad18aa51cf5"
+            alt="WiFi"
+            class="wifi-icon"
+          />
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/f951e128ee6571abc9e9f9bbd419c77229e21df6390d7bd61d01875326cde06b?placeholderIfAbsent=true&apiKey=8a4ad2682aba4f97a1784ad18aa51cf5"
+            alt="Signal"
+            class="signal-icon"
+          />
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/0f180301a15c4b46a38a1a9e593d85fc63cab8f613b3fa037c99370cecf476a7?placeholderIfAbsent=true&apiKey=8a4ad2682aba4f97a1784ad18aa51cf5"
+            alt="Battery"
+            class="battery-icon"
+          />
+        </div>
+      </header>
+
+      <div class="separator" role="presentation"></div>
+
+      <img
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/6e2bd8c3a9f4b373a4f3fa16d5d62c7d89e041605a5c0b52068a5b4bc5c6a8e7?placeholderIfAbsent=true&apiKey=8a4ad2682aba4f97a1784ad18aa51cf5"
+        alt="Logo"
+        class="logo"
+      />
+
+      <form class="login-form" action="#" method="POST">
+        <div class="input-group">
+          <input
+            type="text"
+            id="username"
+            aria-label="아이디"
+            placeholder="아이디"
+          />
+          <div class="input-underline" aria-hidden="true"></div>
+        </div>
+        <div class="input-group password-group">
+          <input
+            type="password"
+            id="password"
+            aria-label="비밀번호"
+            placeholder="비밀번호"
+          />
+          <div class="input-underline" aria-hidden="true"></div>
+        </div>
+      
+
+      <div class="separator" role="presentation"></div>
+
+      <div class="login-button-container">
+        <button type="submit" class="login-button-text">로그인</button>
+  
+        <nav class="options-container">
+          <a href="#" class="option-link">아이디 찾기</a>
+          <div class="option-separator" role="presentation"></div>
+          <a href="#" class="option-link">비밀번호 찾기</a>
+          <div class="option-separator" role="presentation"></div>
+          <a href="#" class="option-link">회원가입</a>
+        </nav>
+      </div>
+    </form>
+    </section>
+  </body>
+</html>
